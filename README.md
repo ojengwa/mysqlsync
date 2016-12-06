@@ -1,6 +1,19 @@
 # mysqlsync
 ## MySQL Sync :: Replication Table from Oracle to MySQL Asynchronously
 
+### Installing
+
+1. Download platform specific binaries:
+```sh 
+$ sudo wget https://github.com/ojengwa/mysqlsync/raw/master/scripts/linux/mysqlsync_linux64_10204.bin -o /usr/local/mysqlsync.bin
+```
+Or for Windows users (you need to download curl first):
+```sh
+c:\ curl https://github.com/ojengwa/mysqlsync/raw/master/scripts/nt/mysqlsync.exe -o mysqlsync.exe
+```
+
+### Usage Instruction
+
 There are lot’s of products for replication data from Oracle to MySQL based on redo log file, such as SharePlex and GoldenGate. I will instroduce another utility named “mysqlsync” which can replicate data from Oracle to MySQL based on the materialized view log for change data capture.
 
 First, let’s create a testing table and the materialized view log in Oracle.
